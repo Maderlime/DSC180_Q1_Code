@@ -21,7 +21,7 @@ USER root
 
 RUN apt-get update
 # ibncursesw5-dev 
-
+RUN apt-get -y install htop
 ######################################################
 RUN apt-get install -y --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 RUN apt-get install -y mecab-ipadic-utf8
@@ -37,13 +37,13 @@ ENV PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
 RUN pyenv install 3.7.11
 RUN pyenv global 3.7.11
 RUN exec $SHELL
-RUN pip install wheel==0.37.0
-RUN pip install numpy==1.19.5
-RUN pip install tensorflow==1.15
-RUN pip install tensorboard==1.15.0
-RUN pip install matplotlib==3.4.2
-RUN pip install scipy==1.7.1
-RUN pip install Pillow==8.3.1 
+RUN pip install --no-cache-dir wheel==0.37.0
+RUN pip install --no-cache-dir numpy==1.19.5
+RUN pip install --no-cache-dir tensorflow==1.15
+RUN pip install --no-cache-dir tensorboard==1.15.0
+RUN pip install --no-cache-dir matplotlib==3.4.2
+RUN pip install --no-cache-dir scipy==1.7.1
+RUN pip install --no-cache-dir Pillow==8.3.1 
 
 ######################################################
 # WORKDIR /home/python_user
