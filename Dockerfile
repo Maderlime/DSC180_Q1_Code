@@ -43,7 +43,7 @@ RUN pip install --no-cache-dir tensorflow==1.15
 RUN pip install --no-cache-dir tensorboard==1.15.0
 RUN pip install --no-cache-dir matplotlib==3.4.2
 RUN pip install --no-cache-dir scipy==1.7.1
-RUN pip install --no-cache-dir Pillow==8.3.1 
+RUN pip install --no-cache-dir Pillow==8.3.1 h5py==2.10 
 
 ######################################################
 # WORKDIR /home/python_user
@@ -92,7 +92,7 @@ RUN pip install --no-cache-dir Pillow==8.3.1
 USER jovyan
 # RUN apt-get install -y --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 # RUN apt-get install -y mecab-ipadic-utf8
-export MPLBACKEND=TKAgg
+# export MPLBACKEND=TKAgg
 # ENV HOME="/root"
 
 # WORKDIR $HOME

@@ -1,10 +1,17 @@
-##ssh
+# Build Overview
+### Testing pipline
+#### python run.py test
+
+
+## ssh
 ssh <user>@dsmlp-login.ucsd.edu
 
 ## building the docker file
 docker build -t test .
-docker run -it --rm mjtjoa/dsc180a_quarter1_code bash
-docker run -it --rm test bash ???
+docker run -it --rm test /bin/bash
+
+<!-- docker run -it --rm mjtjoa/dsc180a_quarter1_code bash -->
+
 
 docker tag test mjtjoa/dsc180a_quarter1_code
 docker push mjtjoa/dsc180a_quarter1_code:latest
