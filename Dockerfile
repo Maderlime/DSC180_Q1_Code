@@ -2,7 +2,7 @@
 # generally use the most recent tag
 
 # base notebook, contains Jupyter and relevant tools
-ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:2021.2-stable
+ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:2021.1-stable
 
 # data science notebook
 # https://hub.docker.com/repository/docker/ucsdets/datascience-notebook/tags
@@ -92,7 +92,7 @@ RUN pip install --no-cache-dir Pillow==8.3.1
 USER jovyan
 # RUN apt-get install -y --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 # RUN apt-get install -y mecab-ipadic-utf8
-
+export MPLBACKEND=TKAgg
 # ENV HOME="/root"
 
 # WORKDIR $HOME
