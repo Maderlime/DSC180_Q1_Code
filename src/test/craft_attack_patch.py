@@ -662,19 +662,29 @@ def load_craft_attack(): # TARGET_LABEL, PATCH_SHAPE, BATCH_SIZE, DATA_PATH
     # Create the models
     resnet1 = ModelContainer('resnet1')
     resnet2 = ModelContainer('resnet2')
-
+    print("------")
+    print("------")
+    print("------")
     # Loading the patch file 
     resnet1_patch_target1 = np.load(DATA_PATH + './patches/resnet1_patch_target1_epoch7.npy')
     resnet1_patch_target0 = np.load(DATA_PATH + './patches/resnet1_patch_target0_epoch7.npy')
     
     # # (Optional) Training resnet 1. Comment this out if using pretrained patch
     # train(resnet1, target_label=0, epochs=2, learning_rate=5)
-    
+    print("------")
+    print("------")
+    print("------")    
     # Combined (attack both target labels) attack
     # Since resnet2 is used but patch was trained with resnet1, this is blackbox attack
     probs_patched_images, probs_original_images, indices, true_labels, winp = \
         attack_combined(resnet2, patch_for_0=resnet1_patch_target0,
                         patch_for_1=resnet1_patch_target1, n_show=1, scale=0.4,
                         predict_original=False)
+    print("------")
+    print("------")
+    print("------")
     print("success times two")
+    print("------")
+    print("------")
+    print("------")
 
