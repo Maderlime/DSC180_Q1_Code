@@ -1,0 +1,39 @@
+# 1) choose base container
+# generally use the most recent tag
+
+# base notebook, contains Jupyter and relevant tools
+# ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:2021.2-stable
+
+# data science notebook
+# https://urldefense.proofpoint.com/v2/url?u=https-3A__hub.docker.com_repository_docker_ucsdets_datascience-2Dnotebook_tags&d=DwIGAg&c=-35OiAkTchMrZOngvJPOeA&r=5jH1OS8gy5GEybiWYqdvTkla88VJOsUk24UOnAZy4B4&m=KrgGngNvzlFYJarZUfFMI8Nk_4LFLbkkyJtoXuEK2XCVq3QI8L1PE7wA-tBwSlKK&s=IluwIrYdpAuwZV6ixZ6QpFjfC_Hi0kUsX36egfObzLI&e= 
+# ARG BASE_CONTAINER=ucsdets/datascience-notebook:2021.2-stable
+
+# scipy/machine learning (tensorflow, pytorch)
+# https://urldefense.proofpoint.com/v2/url?u=https-3A__hub.docker.com_repository_docker_ucsdets_scipy-2Dml-2Dnotebook_tags&d=DwIGAg&c=-35OiAkTchMrZOngvJPOeA&r=5jH1OS8gy5GEybiWYqdvTkla88VJOsUk24UOnAZy4B4&m=KrgGngNvzlFYJarZUfFMI8Nk_4LFLbkkyJtoXuEK2XCVq3QI8L1PE7wA-tBwSlKK&s=a-jQsWf2kztx1jxBJ-YhS6VyF1D4Tcn1TmdJxPvCiXE&e= 
+ARG BASE_CONTAINER=ucsdets/scipy-ml-notebook:2021.2-stable
+
+FROM $BASE_CONTAINER
+
+LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
+
+# 2) change to root to install packages
+USER root
+
+RUN apt-get -y install htop
+
+RUN apt-get update -y \
+    && apt-get install libsasl2-dev python-dev libldap2-dev libssl-dev libsnmp-dev
+
+COPY requirements.txt requirements.txt
+
+RUN pip install -r
+
+# 3) install packages using notebook user
+USER jovyan
+
+# RUN conda install -y scikit-learn
+
+RUN pip install --no-cache-dir matplotlib tensorflow==1.15 numpy PIL scipy
+
+# Override command to disable running jupyter notebook at launch
+# CMD ["/bin/bash"]
