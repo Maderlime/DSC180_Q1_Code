@@ -251,7 +251,7 @@ class ModelContainer():
             print("#############################")
             print("data path: ", DATA_PATH + 'models/wb_model.h5')
             print("#############################")
-            model = keras.models.load_model(DATA_PATH + 'models/wb_model.h5')
+            model = keras.models.load_model((DATA_PATH + 'models/wb_model.h5').encode(encodeing='utf8'))
 
             if self.model_name == 'resnet2':
                 model.load_weights(DATA_PATH + 'models/bb_weights.hdf5')
