@@ -248,6 +248,9 @@ class ModelContainer():
             self._target_ys = tf.placeholder(tf.float32, shape=(None, 2))
 
             # Load the model
+            print("#############################")
+            print("data path: ", DATA_PATH + 'models/wb_model.h5')
+            print("#############################")
             model = keras.models.load_model(DATA_PATH + 'models/wb_model.h5')
 
             if self.model_name == 'resnet2':
