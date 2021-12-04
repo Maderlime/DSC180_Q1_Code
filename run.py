@@ -50,8 +50,9 @@ def main(targets):
         # make the data target
         load_craft_attack()
         print("done")
-
-
+        # write a successful output
+        with open('test/testoutput/test_runresults.txt', 'w') as f:
+            f.write('test successful')
     return
 
 
