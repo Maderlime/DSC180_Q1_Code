@@ -26,6 +26,9 @@ launch-scipy-ml.sh -i mjtjoa/dsc180a_quarter1_code:latest -P Always
   
 ### Relevant Links
   Project Report: https://docs.google.com/document/d/1iQ0lZ_wpxqQXRwwjwKANrwNn6FRDwvasISHf9vpNIHw/edit?usp=sharing
+  
   Project Proposal for Q2: https://docs.google.com/document/d/1d4Z4yS0aSyCMxht0NaaEf_mMxH5KFPg2B8b3rKXyRwk/edit?usp=sharing
+  
   Source Report: https://arxiv.org/pdf/1804.05296.pdf
+  
   Source Repository: https://github.com/sgfin/adversarial-medicine
