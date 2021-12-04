@@ -1,12 +1,12 @@
 # Build Overview
-### Testing pipline
+### Command line prompt to run the code
 #### python run.py test
 
 
-## ssh
+## How to SSH into the DSMLP server
 ssh <user>@dsmlp-login.ucsd.edu
 
-## building the docker file
+## How to build the Docker file
 docker build -t test .
 docker run -it --rm test /bin/bash
 
@@ -23,12 +23,3 @@ sudo rm -rf /var/lib/docker
 
 ### Launching the Docker File
 launch-scipy-ml.sh -i mjtjoa/dsc180a_quarter1_code:latest -P Always
-
-
-
- ld_impl_linux-64-2.3 | 667 KB    | ########## | 100%                                                
- => => # setuptools-59.4.0    | 1016 KB   | ########## | 100%                                                
- => => # zlib-1.2.11          | 86 KB     | ########## | 100%                                                
- => => # readline-8.1         | 295 KB    | ########## | 100%                                                
- => => # tk-8.6.11            | 3.3 MB    | ########## | 100%                                                
- => => # python-3.7.12     
