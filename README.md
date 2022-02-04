@@ -1,3 +1,8 @@
+# STEPS TO RUN CODE ON ADVERSARIAL ROBUST TRAINING (QUARTER 2 - DSC 180B)
+
+
+# STEPS TO RUN CODE ON ADVERSARIAL ATTACKS (QUARTER 1 - DSC 180A)
+
 # Build Overview
 ### Command line prompt to run the code
 #### python run.py test
