@@ -42,7 +42,9 @@ def get_args():
         help='Maintain FP32 master weights to accompany any FP16 model weights, not applicable for O1 opt level')
     return parser.parse_args()
 
-
+def train_fgsm_attack():
+    main()
+    
 def main():
     args = get_args()
 
