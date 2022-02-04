@@ -12,7 +12,7 @@ sys.path.insert(0, 'src/test')
 # from analysis import compute_aggregates
 from model import train
 from craft_attack_patch import load_craft_attack
-
+from train_pgd_orig import train_fgsm
 
 def main(targets):
     '''
