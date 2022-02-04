@@ -12,7 +12,7 @@ sys.path.insert(0, 'src/test')
 # from analysis import compute_aggregates
 from model import train
 from craft_attack_patch import load_craft_attack
-from train_pgd_orig import train_fgsm
+from train_pgd_orig import train_pgd_attack
 
 def main(targets):
     '''
@@ -50,6 +50,8 @@ def main(targets):
         # make the data target
         load_craft_attack()
         print("done")
+        train_pgd_attack()
+        print("trained pgd attack")
         # write a successful output
         with open('test/testoutput/test_runresults.txt', 'w') as f:
             f.write('test successful')
