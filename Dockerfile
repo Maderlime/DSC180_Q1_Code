@@ -49,8 +49,8 @@ RUN pip install --no-cache-dir tensorflow==1.15
 RUN pip install --no-cache-dir tensorboard==1.15.0
 RUN pip install --no-cache-dir matplotlib==3.4.2
 RUN pip install --no-cache-dir scipy==1.7.1
-RUN pip install --no-cache-dir Pillow==8.3.1 h5py==2.10 apex
-RUN pip install --no-cache-dir cuda-python
+RUN pip install --no-cache-dir Pillow==8.3.1 h5py==2.10 
+# RUN pip install --no-cache-dir cuda-python apex
 
 
 
