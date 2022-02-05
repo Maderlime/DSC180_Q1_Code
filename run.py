@@ -6,8 +6,8 @@ sys.path.insert(0, 'src/analysis')
 sys.path.insert(0, 'src/model')
 sys.path.insert(0, 'src/test')
 
-from DSC180_Q1_Code.src.model import preact_resnet_orig, utils_orig
-from DSC180_Q1_Code.src.test import train_fgsm, train_pgd_orig
+from src.model import preact_resnet_orig, utils_orig
+from src.test import train_fgsm, train_pgd_orig
 # from train_pgd_orig import train_pgd_attack
 
 def main(targets):
