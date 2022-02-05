@@ -9,8 +9,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from DSC180_Q1_code.src.model.preact_resnet_orig import PreActResNet18
-from DSC180_Q1_code.src.model.utils_orig import (upper_limit, lower_limit, std, clamp, get_loaders,
+from src.model.preact_resnet_orig import PreActResNet18
+from src.model.utils_orig import (upper_limit, lower_limit, std, clamp, get_loaders,
     evaluate_pgd, evaluate_standard)
 
 logger = logging.getLogger(__name__)
