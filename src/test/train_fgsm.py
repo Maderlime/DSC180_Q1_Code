@@ -15,8 +15,8 @@ sys.path.insert(0, 'src/analysis')
 sys.path.insert(0, 'src/model')
 sys.path.insert(0, 'src/test')
 import PreActResNet18
-import (upper_limit, lower_limit, std, clamp, get_loaders,
-    attack_pgd, evaluate_pgd, evaluate_standard)
+from utils_orig import upper_limit, lower_limit, std, clamp, get_loaders,
+    attack_pgd, evaluate_pgd, evaluate_standard
 
 logger = logging.getLogger(__name__)
 
