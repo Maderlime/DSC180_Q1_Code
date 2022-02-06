@@ -1,11 +1,23 @@
 # STEPS TO RUN CODE ON ADVERSARIAL ROBUST TRAINING (QUARTER 2 - DSC 180B)
 
+## How to SSH into the DSMLP server
+ssh <user>@dsmlp-login.ucsd.edu
+
+## How to build the Docker file
+docker build -t test .
+docker run -it --rm test /bin/bash
+  
+## Deploy a pod with GPU support
+launch-scipy-ml-gpu.sh
+
+## Command line prompt to run the code
+python run.py test
 
 # STEPS TO RUN CODE ON ADVERSARIAL ATTACKS (QUARTER 1 - DSC 180A)
 
 # Build Overview
 ### Command line prompt to run the code
-#### python run.py test
+#### python run.py test_q1
 
 
 ## How to SSH into the DSMLP server
