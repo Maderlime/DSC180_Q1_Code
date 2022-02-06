@@ -10,8 +10,12 @@ import torch.nn as nn
 import torch.nn.functional as F
 from apex import amp
 
-from src.model.preact_resnet import PreActResNet18
-from src.model.utils_orig import (upper_limit, lower_limit, std, clamp, get_loaders,
+sys.path.insert(0, 'src/data')
+sys.path.insert(0, 'src/analysis')
+sys.path.insert(0, 'src/model')
+sys.path.insert(0, 'src/test')
+import PreActResNet18
+import (upper_limit, lower_limit, std, clamp, get_loaders,
     attack_pgd, evaluate_pgd, evaluate_standard)
 
 logger = logging.getLogger(__name__)
