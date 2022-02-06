@@ -13,7 +13,7 @@ sys.path.insert(0, 'src/data')
 sys.path.insert(0, 'src/analysis')
 sys.path.insert(0, 'src/model')
 sys.path.insert(0, 'src/test')
-import PreActResNet18
+from preact_resnet_orig import PreActResNet18
 from utils_orig import upper_limit, lower_limit, std, clamp, get_loaders,
     evaluate_pgd, evaluate_standard
 
