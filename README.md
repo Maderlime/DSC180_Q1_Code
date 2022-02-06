@@ -1,7 +1,7 @@
 # STEPS TO RUN CODE ON ADVERSARIAL ROBUST TRAINING (QUARTER 2 - DSC 180B)
 
 ## How to SSH into the DSMLP server
-ssh [<user>]@dsmlp-login.ucsd.edu
+ssh [user]@dsmlp-login.ucsd.edu
 
 ## How to build the Docker file
 docker build -t test .
