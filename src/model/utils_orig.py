@@ -37,8 +37,8 @@ def get_loaders(dir_, batch_size):
 #         dir_, train=True, transform=train_transform, download=True)
 #     test_dataset = datasets.CIFAR10(
 #         dir_, train=False, transform=test_transform, download=True)
-    train_dataset = datasets.DatasetFolder(root="dir_", loader = npy_loader, extensions = ('.npy'))
-    test_dataset = datasets.DatasetFolder(root="dir_", loader = npy_loader, extensions = ('.npy'))
+    train_dataset = datasets.DatasetFolder(root="test/cxr", loader = npy_loader, extensions = ('.npy'))
+    test_dataset = datasets.DatasetFolder(root="test/cxr", loader = npy_loader, extensions = ('.npy'))
     train_loader = torch.utils.data.DataLoader(
         dataset=train_dataset,
         batch_size=batch_size,

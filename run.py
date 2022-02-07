@@ -46,11 +46,10 @@ def main(targets):
         # make the data target
         train_pgd_orig.test_capabilities()
         print("done with PGD")
-        # train_fgsm.train_model()
-        # print("trained fgsm attack")
         # write a successful output
-        with open('test/testoutput/test_runresults.txt', 'w') as f:
-            f.write('test successful')
+        print("end of test")
+#         with open('test/testoutput/test_runresults.txt', 'w') as f:
+#             f.write('test successful')
     return
 
 

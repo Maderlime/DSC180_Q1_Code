@@ -49,13 +49,7 @@ def get_args():
     return parser.parse_args()
 
 def test_capabilities():
-    train_loader, test_loader = get_loaders('cxr', 'cxr')
-    print('loaders gotted')
-    epsilon = (5 / 255.) / std
-    alpha = (2 / 255.) / std
-
-    model = PreActResNet18().cuda()
-    model.train()
+    model = PreActResNet18()
     print('preactresnet model loaded')
 
     
@@ -179,5 +173,3 @@ def main():
     logger.info('%.4f \t \t %.4f \t %.4f \t %.4f', test_loss, test_acc, pgd_loss, pgd_acc)
 
 
-if __name__ == "__main__":
-    main()
