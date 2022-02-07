@@ -57,5 +57,6 @@ def main(targets):
 if __name__ == '__main__':
     # run via:
     # python main.py data model
-    targets = sys.argv[1:]
+    targets = sys.argv[:]
+    print("hello")
     main(targets)
