@@ -23,6 +23,7 @@ logger = logging.getLogger(__name__)
 
 def get_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument('--type', default=0, type=int)
     parser.add_argument('--batch-size', default=1, type=int)
     parser.add_argument('--data-dir', default='../../test/cxr', type=str)
     parser.add_argument('--epochs', default=15, type=int)
