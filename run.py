@@ -44,7 +44,7 @@ def main(targets):
             model_cfg = json.load(fh)
         print('success')
         # make the data target
-        train_pgd_orig.train_pgd_attack()
+        train_pgd_orig.test_capabilities()
         print("done with PGD")
         # train_fgsm.train_model()
         # print("trained fgsm attack")
