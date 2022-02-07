@@ -48,9 +48,16 @@ def get_args():
         help='Maintain FP32 master weights to accompany any FP16 model weights, not applicable for O1 opt level')
     return parser.parse_args()
 
-def train_pgd_attack():
-    main()
-    print("pgd trained")
+def test_capabilities():
+    train_loader, test_loader = get_loaders('cxr', 'cxr')
+    print('loaders gotted')
+    epsilon = (5 / 255.) / std
+    alpha = (2 / 255.) / std
+
+    model = PreActResNet18().cuda()
+    model.train()
+    print('preactresnet model loaded')
+
     
 def main():
     args = get_args()
