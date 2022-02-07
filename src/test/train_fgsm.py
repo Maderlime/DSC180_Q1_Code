@@ -167,6 +167,8 @@ def main():
     logger.info('Test Loss \t Test Acc \t PGD Loss \t PGD Acc')
     logger.info('%.4f \t \t %.4f \t %.4f \t %.4f', test_loss, test_acc, pgd_loss, pgd_acc)
 
-
+def train_model():
+    main()
+    print("FGSM model trained")
 if __name__ == "__main__":
     main()

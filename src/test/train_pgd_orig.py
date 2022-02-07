@@ -49,6 +49,7 @@ def get_args():
 
 def train_pgd_attack():
     main()
+    print("pgd trained")
     
 def main():
     args = get_args()
