@@ -2,6 +2,8 @@ import argparse
 import logging
 import os
 import time
+import sys
+
 
 import apex.amp as amp
 import numpy as np
@@ -9,9 +11,12 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from src.model.preact_resnet_orig import PreActResNet18
-from src.model.utils_orig import (upper_limit, lower_limit, std, clamp, get_loaders,
-    evaluate_pgd, evaluate_standard)
+sys.path.insert(0, 'src/data')
+sys.path.insert(0, 'src/analysis')
+sys.path.insert(0, 'src/model')
+sys.path.insert(0, 'src/test')
+from preact_resnet_orig import PreActResNet18
+from utils_orig import upper_limit, lower_limit, std, clamp, get_loaders, evaluate_pgd, evaluate_standard
 
 logger = logging.getLogger(__name__)
 
