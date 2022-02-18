@@ -49,7 +49,8 @@ def get_args():
     return parser.parse_args()
 
 def test_capabilities():
-    model = PreActResNet18()
+    model = PreActResNet18().cuda()
+    model.train()
     print('preactresnet model loaded')
 
     
