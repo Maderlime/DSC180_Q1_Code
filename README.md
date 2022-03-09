@@ -10,7 +10,24 @@ docker run -it --rm test /bin/bash
 ## Deploy a pod with GPU support
 launch-scipy-ml-gpu.sh
 
-## Command line prompt to run the code
+# LOADING IN DATA
+
+Load in the data from the following source: https://www.dropbox.com/sh/tg6xij9hhfzgio9/AADqu6BMq3Rko7U7-q6vwmMFa?dl=0
+
+We will use the following files for each dataset:
+- val_test_x_preprocess.npy
+- val_test_y.npy
+
+Make a folder in for the test and train data for each dataset. Within each of these folders, create two subfolders titled as '0' and '1'. 
+
+From here, go to the file at DSC180_Q1_Code/patch_attacks/data/cxr/make_fast_adversarial_documents.ipynb and run the code in these cells. This will load in the images as Numpy files and partition them into training and test sets. Set the output writing dirctories to the folders you created above. Use a 70/30 split in the ranges in the code based on the size of the dataset. 
+
+# MAKING ADJUSTMENTS TO THE CODE
+
+You can edit hyperparameters for the FGSM training model in the train_fgsm.py file in src/test. You can edit attack parameters in the evaluate_pgd method on the utils.py file in src/model. You can select the datasets you want to load in from the ones you created above. 
+
+
+# Command line prompt to run the code
 python run.py test
 
 # STEPS TO RUN CODE ON ADVERSARIAL ATTACKS (QUARTER 1 - DSC 180A)
