@@ -30,7 +30,7 @@ def main(targets):
             analysis_cfg = json.load(fh)
 
         # make the data target
-       train_fgsm.main()
+        train_fgsm.main()
 
 #     if 'model' in targets:
 #         with open('config/model-params.json') as fh:
