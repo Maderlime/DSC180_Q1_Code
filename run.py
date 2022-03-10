@@ -44,7 +44,7 @@ def main(targets):
             model_cfg = json.load(fh)
         print('success')
         # make the data target
-        train_fgsm.test_capabilities()
+        train_fgsm.main()
         print("done with PGD")
         # write a successful output
         print("end of test")
