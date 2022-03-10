@@ -58,6 +58,7 @@ sudo rm -rf /var/lib/docker
 ### Launching the Docker File
 launch-scipy-ml.sh -i mjtjoa/dsc180a_quarter1_code:latest -P Always
   
+launch-scipy-ml-gpu.sh -i mjtjoa/dsc180a_quarter1_code:latest -P Always
 ### Relevant Links
   Project Report: https://docs.google.com/document/d/1iQ0lZ_wpxqQXRwwjwKANrwNn6FRDwvasISHf9vpNIHw/edit?usp=sharing
   
