@@ -7,7 +7,7 @@ sys.path.insert(0, 'src/model')
 sys.path.insert(0, 'src/test')
 
 import preact_resnet_orig, utils_orig
-import train_fgsm, train_pgd_orig
+import train_fgsm
 # from train_pgd_orig import train_pgd_attack
 
 def main(targets):
@@ -44,7 +44,7 @@ def main(targets):
             model_cfg = json.load(fh)
         print('success')
         # make the data target
-        train_pgd_orig.test_capabilities()
+        train_fgsm.test_capabilities()
         print("done with PGD")
         # write a successful output
         print("end of test")
