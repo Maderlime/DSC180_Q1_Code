@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 def main():
     
     batch_size = 1
-    data_dir = '../../cifar-data'
+    data_dir = '../../test/cxr'
     epochs = 15
     lr_schedule = 'cyclic'
     lr_min = float(0.)
