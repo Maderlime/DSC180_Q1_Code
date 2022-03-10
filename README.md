@@ -34,7 +34,9 @@ python run.py test
 
 # Build Overview
 ### Command line prompt to run the code
-#### python run.py test_q1
+#### python run.py test
+### Run the larger test/analysis code with
+#### python run.py analysis
 
 
 ## How to SSH into the DSMLP server
@@ -55,10 +57,9 @@ docker system prune
 docker system prune -a
 sudo rm -rf /var/lib/docker
 
-### Launching the Docker File
-launch-scipy-ml.sh -i mjtjoa/dsc180a_quarter1_code:latest -P Always
-  
-launch-scipy-ml-gpu.sh -i mjtjoa/dsc180a_quarter1_code:latest -P Always
+### Launching the Docker File  
+launch-scipy-ml-gpu.sh -i mjtjoa/dsc180a_quarter1_code:latest
+  (if this doesn't work, add -P Always)
 ### Relevant Links
   Project Report: https://docs.google.com/document/d/1iQ0lZ_wpxqQXRwwjwKANrwNn6FRDwvasISHf9vpNIHw/edit?usp=sharing
   
