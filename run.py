@@ -7,7 +7,7 @@ sys.path.insert(0, 'src/model')
 sys.path.insert(0, 'src/test')
 
 import preact_resnet_orig, utils_orig
-import train_fgsm
+import train_fgsm, train_pgd_orig
 # from train_pgd_orig import train_pgd_attack
 
 def main(targets):
@@ -25,12 +25,12 @@ def main(targets):
 #         # make the data target
 #         data = get_data(**data_cfg)
 
-#     if 'analysis' in targets:
-#         with open('config/analysis-params.json') as fh:
-#             analysis_cfg = json.load(fh)
+    if 'analysis' in targets:
+        with open('config/analysis-params.json') as fh:
+            analysis_cfg = json.load(fh)
 
-#         # make the data target
-#         compute_aggregates(data, **analysis_cfg)
+        # make the data target
+       train_fgsm.main()
 
 #     if 'model' in targets:
 #         with open('config/model-params.json') as fh:
@@ -44,7 +44,7 @@ def main(targets):
             model_cfg = json.load(fh)
         print('success')
         # make the data target
-        train_fgsm.main()
+        train_pgd.test_capabilities()
         print("done with PGD")
         # write a successful output
         print("end of test")
